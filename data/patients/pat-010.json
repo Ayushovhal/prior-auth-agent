@@ -1,0 +1,471 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-010",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-010",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-010",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Chronic axial low back pain since 2020. He denies leg pain, weakness, numbness, saddle anesthesia, and bowel or bladder change. Neurologic exam on 1 March 2026 is normal. Pain 2/10. He is independent with walking, stairs, and daily activities and wants therapy for general wellness. Fourteen physical therapy visits this episode with no re-evaluation. A continuation order is on the chart. No diabetes.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10010"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Patel",
+            "given": [
+              "Liam"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1976-08-09",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-010-lbp",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-010-lbp",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "279039007",
+              "display": "Low back pain"
+            }
+          ],
+          "text": "Low back pain"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "onsetDateTime": "2020-01-01",
+        "recordedDate": "2020-01-01",
+        "note": [
+          {
+            "text": "Chronic axial low back pain only. He denies radiation to the legs, weakness, numbness, saddle anesthesia, and bowel or bladder change. He wants to continue physical therapy for general wellness and conditioning. No functional goal beyond staying loose."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-010-neuro",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-010-neuro",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Neurologic examination"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Strength 5/5 in both legs, reflexes symmetric, sensation intact. Straight-leg raise is negative. No red-flag neurologic findings. Symptoms are axial only and have been present for years."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-010-function",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-010-function",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Functional status"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Independent in walking, stairs, and activities of daily living. No work restriction. Stated purpose of more therapy is general wellness and conditioning. No functional goal was named. Pain is 2/10. Fourteen visits have already been completed this episode without a re-evaluation."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-010-pain",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-010-pain",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 2,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Low back pain 2/10."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-010-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-010-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-010-pt-visits",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-010-pt-visits",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Physical therapy visits in current episode"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueInteger": 14,
+        "note": [
+          {
+            "text": "Fourteen visits this episode for general conditioning. No re-evaluation documents a remaining functional deficit or a new goal."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-010-ibuprofen",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-010-ibuprofen",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "5640",
+              "display": "Ibuprofen"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "authoredOn": "2025-11-01",
+        "dosageInstruction": [
+          {
+            "text": "200 mg by mouth as needed"
+          }
+        ],
+        "note": [
+          {
+            "text": "Over-the-counter strength ibuprofen as needed for mild axial pain. Not a scheduled prescription-strength course."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-010-pt",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-010-pt",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "97110",
+              "display": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises"
+            }
+          ],
+          "text": "Therapeutic exercises"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "performedPeriod": {
+          "start": "2025-11-01",
+          "end": "2026-03-01"
+        },
+        "note": [
+          {
+            "text": "Fourteen physical therapy visits this episode for general conditioning. No re-evaluation with a new functional goal."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/ServiceRequest/sr-010-pt",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "sr-010-pt",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "97110",
+              "display": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises"
+            }
+          ],
+          "text": "Physical therapy evaluation and treatment"
+        },
+        "subject": {
+          "reference": "Patient/pat-010"
+        },
+        "authoredOn": "2026-03-10",
+        "note": [
+          {
+            "text": "Continuation requested for wellness and general conditioning after 14 visits. No new functional goal."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-008",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-008",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-008",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Type 1 diabetes on insulin glargine. Hemoglobin A1c 7.8 percent on 1 February 2026. Not type 2 diabetes. Home sleep test on 20 January 2026 showed an obstructive AHI of 3.2 events per hour. Epworth score 6. A CPAP order is on the chart. He snores.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10008"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Kim",
+            "given": [
+              "Robert"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1995-07-30",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-008-diabetes",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-008-diabetes",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "46635009",
+              "display": "Diabetes mellitus type 1"
+            }
+          ],
+          "text": "Diabetes mellitus type 1"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "onsetDateTime": "2008-01-15",
+        "recordedDate": "2008-01-15",
+        "note": [
+          {
+            "text": "Type 1 diabetes mellitus. Insulin dependent. This is not type 2 diabetes."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-008-snoring",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-008-snoring",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "72863001",
+              "display": "Snoring"
+            }
+          ],
+          "text": "Snoring"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "onsetDateTime": "2025-12-01",
+        "recordedDate": "2025-12-01",
+        "note": [
+          {
+            "text": "Snoring. Sleep study did not show obstructive sleep apnea."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-a1c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-a1c",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-02-01",
+        "valueQuantity": {
+          "value": 7.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-02-01",
+        "valueQuantity": {
+          "value": 23.8,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-thyroid",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-thyroid",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Medullary thyroid carcinoma and MEN 2 history"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-02-01",
+        "valueString": "No personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia type 2."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-ahi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-ahi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "procedure",
+                "display": "Procedure"
+              }
+            ],
+            "text": "Procedure"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "90563-8",
+              "display": "Obstructive apnea hypopnea index"
+            }
+          ],
+          "text": "Obstructive apnea hypopnea index"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "valueQuantity": {
+          "value": 3.2,
+          "unit": "/h",
+          "system": "http://unitsofmeasure.org",
+          "code": "/h"
+        },
+        "note": [
+          {
+            "text": "Home sleep apnea test. Obstructive AHI 3.2 events per hour."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-epworth",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-epworth",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Epworth Sleepiness Scale score"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-01-22",
+        "valueInteger": 6,
+        "note": [
+          {
+            "text": "Score 6. Below the symptom threshold used with a mild AHI."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-008-visit",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-008-visit",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Face-to-face sleep evaluation"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "effectiveDateTime": "2026-01-22",
+        "valueString": "Face-to-face visit. Snoring without significant daytime sleepiness. Epworth Sleepiness Scale score 6. Home study obstructive AHI 3.2. No witnessed apneas."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-008-glargine",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-008-glargine",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "274783",
+              "display": "insulin glargine"
+            }
+          ],
+          "text": "insulin glargine"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "authoredOn": "2020-01-01",
+        "dosageInstruction": [
+          {
+            "text": "18 units subcutaneously at bedtime"
+          }
+        ],
+        "note": [
+          {
+            "text": "Basal insulin for type 1 diabetes. He is not taking metformin."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-008-hst",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-008-hst",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "95806",
+              "display": "Sleep study, unattended, simultaneous recording"
+            }
+          ],
+          "text": "Sleep study, unattended"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "performedPeriod": {
+          "start": "2026-01-20",
+          "end": "2026-01-20"
+        },
+        "note": [
+          {
+            "text": "Home sleep apnea test. Obstructive AHI 3.2 events per hour. Central apnea was not the predominant finding."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/ServiceRequest/sr-008-cpap",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "sr-008-cpap",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+              "code": "E0601",
+              "display": "Continuous positive airway pressure (CPAP) device"
+            }
+          ],
+          "text": "CPAP device"
+        },
+        "subject": {
+          "reference": "Patient/pat-008"
+        },
+        "authoredOn": "2026-01-25",
+        "note": [
+          {
+            "text": "CPAP was ordered after the sleep study."
+          }
+        ]
+      }
+    }
+  ]
+}

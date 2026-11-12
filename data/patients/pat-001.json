@@ -1,0 +1,473 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-001",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-001",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Right knee catching and giving way since 5 January 2026. The knee is not locked. Knee x-ray on 20 January 2026 did not explain the symptoms. She completed eight physical therapy visits and is still taking prescribed ibuprofen, started 6 January 2026. No prior knee MRI. No diabetes, no sleep apnea, no back pain.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10001"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Vasquez",
+            "given": [
+              "Elena"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1978-04-12",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-001-meniscus",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-001-meniscus",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional",
+              "display": "Provisional"
+            }
+          ],
+          "text": "Provisional"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "239720000",
+              "display": "Tear of medial meniscus of knee"
+            }
+          ],
+          "text": "Tear of medial meniscus of knee"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "onsetDateTime": "2026-01-05",
+        "recordedDate": "2026-01-05",
+        "note": [
+          {
+            "text": "Suspected right medial meniscal tear. Mechanical symptoms: catching and episodic giving way. The knee is not locked and she can fully extend it. No prior knee MRI."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-001-exam",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-001-exam",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Knee history and exam"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "effectiveDateTime": "2026-02-20",
+        "valueString": "Right knee exam: medial joint-line tenderness, catching, and giving way. Not locked; full extension is possible. Ligament testing shows no instability."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-001-pain",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-001-pain",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "effectiveDateTime": "2026-02-20",
+        "valueQuantity": {
+          "value": 5,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Right knee pain 5/10."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-001-xray",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-001-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Knee x-ray report"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "valueString": "No fracture. Joint spaces preserved. No significant osteoarthritis. The x-ray does not explain the mechanical symptoms; internal derangement is not excluded."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-001-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-001-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "effectiveDateTime": "2026-02-20",
+        "valueQuantity": {
+          "value": 24.1,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-001-pt-visits",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-001-pt-visits",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Physical therapy visits in current episode"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueInteger": 8,
+        "note": [
+          {
+            "text": "Eight visits for the right knee. That course has ended."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-001-ibuprofen",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-001-ibuprofen",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "5640",
+              "display": "Ibuprofen"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "authoredOn": "2026-01-06",
+        "dosageInstruction": [
+          {
+            "text": "600 mg by mouth three times daily"
+          }
+        ],
+        "note": [
+          {
+            "text": "Prescription-strength NSAID for the right knee, started 6 January 2026 and still active."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-001-xray",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-001-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "73560",
+              "display": "Radiologic examination, knee; 1 or 2 views"
+            }
+          ],
+          "text": "Radiologic examination, knee; 1 or 2 views"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "performedPeriod": {
+          "start": "2026-01-20",
+          "end": "2026-01-20"
+        },
+        "note": [
+          {
+            "text": "Report: no fracture, no significant osteoarthritis. X-ray does not explain the mechanical symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-001-pt",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-001-pt",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "97110",
+              "display": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises"
+            }
+          ],
+          "text": "Therapeutic exercises"
+        },
+        "subject": {
+          "reference": "Patient/pat-001"
+        },
+        "performedPeriod": {
+          "start": "2026-01-06",
+          "end": "2026-03-01"
+        },
+        "note": [
+          {
+            "text": "Eight physical therapy visits for right knee pain. Functional goal of that course was walking without catching. Mechanical symptoms persisted, and the course ended 1 March 2026."
+          }
+        ]
+      }
+    }
+  ]
+}

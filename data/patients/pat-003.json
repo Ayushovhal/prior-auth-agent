@@ -1,0 +1,640 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-003",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-003",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-003",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Left L5 radiculopathy since 5 January 2026 with weakness, a diminished ankle reflex, and sensory loss. Ten physical therapy visits did not relieve the leg pain. She also has type 2 diabetes on metformin. Hemoglobin A1c of 8.4 percent was last resulted 1 September 2025. No personal or family history of medullary thyroid carcinoma or MEN 2. Body mass index 31.4 on that same date.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10003"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Rahman",
+            "given": [
+              "Aisha"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1972-06-19",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-003-radiculopathy",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-003-radiculopathy",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "128196005",
+              "display": "Radiculopathy"
+            }
+          ],
+          "text": "Radiculopathy"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "onsetDateTime": "2026-01-05",
+        "recordedDate": "2026-01-05",
+        "note": [
+          {
+            "text": "Lumbar radiculopathy, left L5. Leg pain for about ten weeks. Conservative care has failed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-003-diabetes",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-003-diabetes",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "onsetDateTime": "2019-04-01",
+        "recordedDate": "2019-04-01",
+        "note": [
+          {
+            "text": "Type 2 diabetes mellitus on metformin. No personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia type 2."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-neuro",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-neuro",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Neurologic examination"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Left ankle dorsiflexion 4/5, left Achilles reflex diminished, decreased sensation on the dorsum of the left foot. Straight-leg raise positive on the left at 40 degrees. No saddle anesthesia. No bowel or bladder symptoms. Symptoms began 5 January 2026."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-pain",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-pain",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Low back and left leg pain 7/10."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-goal",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-goal",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Functional limitation and goal"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Pain limits walking to less than one block. Functional goal: walk two blocks without left leg pain."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2025-09-01",
+        "valueQuantity": {
+          "value": 31.4,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-a1c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-a1c",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2025-09-01",
+        "valueQuantity": {
+          "value": 8.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "Most recent A1c. Collected 1 September 2025. No newer result is on file."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-003-pt-visits",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-003-pt-visits",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Physical therapy visits in current episode"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "effectiveDateTime": "2026-03-06",
+        "valueInteger": 10,
+        "note": [
+          {
+            "text": "Ten lumbar visits. Leg pain persisted. No active new referral is on file."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-003-naproxen",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-003-naproxen",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7258",
+              "display": "Naproxen"
+            }
+          ],
+          "text": "Naproxen"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "authoredOn": "2026-01-06",
+        "dosageInstruction": [
+          {
+            "text": "500 mg by mouth twice daily"
+          }
+        ],
+        "note": [
+          {
+            "text": "Prescription-strength NSAID for radicular pain, started 6 January 2026."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-003-gabapentin",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-003-gabapentin",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "25480",
+              "display": "Gabapentin"
+            }
+          ],
+          "text": "Gabapentin"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "authoredOn": "2026-01-10",
+        "dosageInstruction": [
+          {
+            "text": "300 mg by mouth at bedtime"
+          }
+        ],
+        "note": [
+          {
+            "text": "For neuropathic leg pain."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-003-metformin",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-003-metformin",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "6809",
+              "display": "Metformin"
+            }
+          ],
+          "text": "Metformin"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "authoredOn": "2024-01-15",
+        "dosageInstruction": [
+          {
+            "text": "1000 mg by mouth twice daily"
+          }
+        ],
+        "note": [
+          {
+            "text": "Active metformin for type 2 diabetes. No contraindication documented because she is taking it."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-003-pt",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-003-pt",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "97110",
+              "display": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises"
+            }
+          ],
+          "text": "Therapeutic exercises"
+        },
+        "subject": {
+          "reference": "Patient/pat-003"
+        },
+        "performedPeriod": {
+          "start": "2026-01-12",
+          "end": "2026-03-06"
+        },
+        "note": [
+          {
+            "text": "Ten physical therapy visits for lumbar radiculopathy. Left leg pain and weakness persisted at discharge from this course."
+          }
+        ]
+      }
+    }
+  ]
+}

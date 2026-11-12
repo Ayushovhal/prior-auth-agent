@@ -1,0 +1,508 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-009",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-009",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-009",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Bilateral knee osteoarthritis. Pain 6/10 and difficulty with stairs and walking more than one block. She denies locking, catching, giving way, and instability. Knee x-ray on 1 February 2026 shows moderate medial compartment osteoarthritis. An active physical therapy referral names a functional goal. No therapy visits yet this episode. No diabetes.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10009"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Brooks",
+            "given": [
+              "Hannah"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1955-01-11",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-009-oa",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-009-oa",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "239873007",
+              "display": "Osteoarthritis of knee"
+            }
+          ],
+          "text": "Osteoarthritis of knee"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "onsetDateTime": "2022-04-01",
+        "recordedDate": "2022-04-01",
+        "note": [
+          {
+            "text": "Bilateral knee osteoarthritis. Activity-related pain. She denies locking, catching, and giving way. Exam shows no instability."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-exam",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-exam",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Knee history and exam"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Bony enlargement, crepitus, and limited flexion. She denies locking, catching, and giving way. Ligaments are stable. The knee is not locked."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-xray",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Knee x-ray report"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-02-01",
+        "valueString": "Moderate medial compartment osteoarthritis of both knees. No fracture."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-goal",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-goal",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Functional limitation and goal"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueString": "Difficulty ascending stairs and walking more than one block. Functional goal: climb one flight and walk two blocks."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-pain",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-pain",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 6,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Knee pain 6/10."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 27.5,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-009-pt-visits",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-009-pt-visits",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Physical therapy visits in current episode"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueInteger": 0,
+        "note": [
+          {
+            "text": "No visits yet in this episode."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-009-acetaminophen",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-009-acetaminophen",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "161",
+              "display": "Acetaminophen"
+            }
+          ],
+          "text": "Acetaminophen"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "authoredOn": "2026-02-01",
+        "dosageInstruction": [
+          {
+            "text": "500 mg by mouth three times daily"
+          }
+        ],
+        "note": [
+          {
+            "text": "Acetaminophen only. This is not a prescription-strength NSAID."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-009-xray",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-009-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "73560",
+              "display": "Radiologic examination, knee; 1 or 2 views"
+            }
+          ],
+          "text": "Radiologic examination, knee; 1 or 2 views"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "performedPeriod": {
+          "start": "2026-02-01",
+          "end": "2026-02-01"
+        },
+        "note": [
+          {
+            "text": "Moderate medial compartment osteoarthritis. No fracture."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/ServiceRequest/sr-009-pt",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "sr-009-pt",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "97110",
+              "display": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises"
+            }
+          ],
+          "text": "Physical therapy evaluation and treatment"
+        },
+        "subject": {
+          "reference": "Patient/pat-009"
+        },
+        "authoredOn": "2026-03-01",
+        "note": [
+          {
+            "text": "Referral for knee osteoarthritis. Functional goal: climb one flight and walk two blocks. Not a maintenance or wellness plan."
+          }
+        ]
+      }
+    }
+  ]
+}

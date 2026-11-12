@@ -1,0 +1,471 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pat-004",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://synthetic.example.org/tags",
+        "code": "synthetic",
+        "display": "Synthetic data \u2014 not a real patient"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-03-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Patient/pat-004",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-004",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Synthetic chart. Not a real patient.</p><p>Right leg radicular pain since 10 January 2026, still present on naproxen. No neurologic examination is recorded. No physical therapy visits and no therapy referral. Pain 7/10. Functional goal: walk two blocks without right leg pain. Lumbar x-ray shows no fracture.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://synthetic.example.org/mrn",
+            "value": "MRN-10004"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Okonkwo",
+            "given": [
+              "James"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1990-02-28",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "100 Synthetic Lane"
+            ],
+            "city": "Exampleville",
+            "state": "IL",
+            "postalCode": "00000",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Condition/cond-004-radiculopathy",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-004-radiculopathy",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "128196005",
+              "display": "Radiculopathy"
+            }
+          ],
+          "text": "Radiculopathy"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "onsetDateTime": "2026-01-10",
+        "recordedDate": "2026-01-10",
+        "note": [
+          {
+            "text": "Lumbar radiculopathy with pain radiating to the right calf for about nine weeks. Pain persists despite naproxen started 12 January 2026. He denies saddle anesthesia and bowel or bladder symptoms. A neurologic examination was not recorded."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-history",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-history",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Symptom history"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-03-10",
+        "valueString": "Sharp pain from the low back into the right calf when walking. Duration nine weeks, onset 10 January 2026. No neurologic exam was performed at this visit."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-goal",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-goal",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Functional limitation and goal"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-03-10",
+        "valueString": "Walking is limited by right leg pain. Functional goal: walk two blocks without right leg pain."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-pain",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-pain",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-03-10",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Low back and right leg pain 7/10."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-xray",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ],
+            "text": "Exam"
+          }
+        ],
+        "code": {
+          "text": "Lumbar spine x-ray report"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-02-01",
+        "valueString": "Mild degenerative change. No fracture and no listhesis."
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-bmi",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-bmi",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-03-10",
+        "valueQuantity": {
+          "value": 23.5,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Observation/obs-004-pt-visits",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-004-pt-visits",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          }
+        ],
+        "code": {
+          "text": "Physical therapy visits in current episode"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "effectiveDateTime": "2026-03-10",
+        "valueInteger": 0,
+        "note": [
+          {
+            "text": "No physical therapy this episode, and no referral is on file."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/MedicationRequest/med-004-naproxen",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-004-naproxen",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7258",
+              "display": "Naproxen"
+            }
+          ],
+          "text": "Naproxen"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "authoredOn": "2026-01-12",
+        "dosageInstruction": [
+          {
+            "text": "500 mg by mouth twice daily"
+          }
+        ],
+        "note": [
+          {
+            "text": "Prescription-strength NSAID started 12 January 2026. Radicular pain is still present."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://synthetic.example.org/fhir/Procedure/proc-004-xray",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-004-xray",
+        "meta": {
+          "tag": [
+            {
+              "system": "http://synthetic.example.org/tags",
+              "code": "synthetic",
+              "display": "Synthetic data \u2014 not a real patient"
+            }
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "72100",
+              "display": "Radiologic examination, spine, lumbosacral; 2 or 3 views"
+            }
+          ],
+          "text": "Radiologic examination, spine, lumbosacral; 2 or 3 views"
+        },
+        "subject": {
+          "reference": "Patient/pat-004"
+        },
+        "performedPeriod": {
+          "start": "2026-02-01",
+          "end": "2026-02-01"
+        },
+        "note": [
+          {
+            "text": "Mild degenerative change. No fracture."
+          }
+        ]
+      }
+    }
+  ]
+}
