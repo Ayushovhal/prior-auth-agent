@@ -1,60 +1,39 @@
 # Prior Authorization Agent
 
-Clinic staff need a prior authorization packet before an insurer will cover a procedure. This project is an agent that reads a synthetic chart, finds the matching coverage policy, and either drafts the request or lists what is still missing.
+**Work in progress.** The dataset is in the repo. The agent, API, and evaluation are not built yet.
 
-All patients and policies in this repository are fictional. There is no real patient data.
+Clinic staff use this agent to prepare a prior authorization request. Given a patient id and a procedure, it reads the synthetic chart, finds the insurer's coverage rules, checks which criteria are met, and either drafts the request with policy citations or lists the information that is still missing.
 
-## What is here now
+All patients and policies are fictional. There is no real patient data.
 
-The repository currently contains the synthetic dataset the agent will use:
-
-- 10 FHIR R4 patient bundles in `data/patients/`
-- 5 payer policy documents in `data/policies/`
-
-Each policy has stable section ids, covered indications, required documentation, exclusions, and a decision guide with three outcomes: ready to submit, missing information, or not covered. The chart date for every bundle is 15 March 2026 (`Bundle.timestamp`).
-
-The tools, model loop, API, and evaluation run are the next steps. This README will be updated when those exist. There is no evaluation table yet, because the eval set has not been run.
-
-## How a chart lines up with a policy
-
-| Patient | Knee MRI | Lumbar spine MRI | CPAP | GLP-1 | Physical therapy |
-| --- | --- | --- | --- | --- | --- |
-| pat-001 Elena Vasquez | Ready | Not covered | Not covered | Not covered | Missing a new referral |
-| pat-002 Marcus Chen | Missing x-ray and 6 weeks of care | Not covered | Not covered | Not covered | Missing a referral |
-| pat-003 Aisha Rahman | Not covered | Ready | Not covered | Missing a current A1c | Missing a new referral |
-| pat-004 James Okonkwo | Not covered | Missing the neurologic exam | Not covered | Not covered | Missing a referral |
-| pat-005 Priya Shah | Not covered | Not covered | Ready | Not covered | Not covered |
-| pat-006 David Nguyen | Not covered | Not covered | Missing a sleep study and order | Not covered | Not covered |
-| pat-007 Sofia Alvarez | Not covered | Not covered | Not covered | Ready | Not covered |
-| pat-008 Robert Kim | Not covered | Not covered | Not covered (AHI under 5) | Not covered (type 1 diabetes) | Not covered |
-| pat-009 Hannah Brooks | Not covered (osteoarthritis only) | Not covered | Not covered | Not covered | Ready |
-| pat-010 Liam Patel | Not covered | Not covered (axial pain only) | Not covered | Not covered | Not covered (wellness, 14 visits) |
-
-## Planned shape
+## Planned architecture
 
 ```mermaid
 flowchart LR
-  staff[Clinic staff] --> api[POST /prior-auth]
-  api --> agent[Agent loop]
-  agent --> fhir[Patient chart]
-  agent --> policy[Policy search]
-  agent --> criteria[Criteria check]
-  agent --> draft[Request draft]
-  fhir --> data[Synthetic FHIR bundles]
-  policy --> docs[Policy documents]
+  staff[Clinic staff] --> api["POST /prior-auth"]
+  api --> loop[Agent loop]
+  loop --> mcp[MCP tools]
+  mcp --> patients[Patient summary]
+  mcp --> search[Policy search]
+  mcp --> criteria[Criteria check]
+  mcp --> draft[Request draft]
+  patients --> fhir[Synthetic FHIR bundles]
+  search --> chroma[ChromaDB]
+  chroma --> policies[Policy documents]
+  loop --> llm[OpenAI or Anthropic]
 ```
 
-The policy text stays separate from the tool code so the tools can be tested without the model.
+Tool logic stays separate from the MCP server so the tools can be tested without a model. The provider is chosen with `LLM_PROVIDER`. Policy search uses ChromaDB and `all-MiniLM-L6-v2`. The API is one FastAPI endpoint.
 
-## Configuration
+## Roadmap
 
-Copy the example file and fill in keys only on your machine:
-
-```bash
-copy .env.example .env
-```
-
-`.env` is gitignored. `.env.example` is committed with blank values. Do not put API keys in either file in git.
+- [x] **Step 1 — Synthetic data.** 10 FHIR R4 patient bundles and 5 policy documents (knee MRI, lumbar spine MRI, CPAP, GLP-1, physical therapy), with covered indications, required documentation, and exclusions.
+- [ ] **Step 2 — Tool logic and tests.** `get_patient`, `search_policy`, `check_criteria`, and `draft_request`, with pytest coverage including unknown patients, unknown procedures, and empty results.
+- [ ] **Step 3 — MCP server.** Expose the four tools with FastMCP and verify them in the MCP Inspector.
+- [ ] **Step 4 — Agent loop.** Tool calling with a step limit, failed-call handling, a structured final result, and a log of each call, its arguments, latency, and tokens.
+- [ ] **Step 5 — FastAPI endpoint.** `POST /prior-auth` returns the decision, draft, citations, and step trace.
+- [ ] **Step 6 — Evals.** 20 cases with expected decisions and cited sections. Report decision accuracy, citation precision and recall, and average tool calls, latency, and token cost.
+- [ ] **Step 7 — README.** Problem, architecture diagram, how to run, design tradeoffs, evaluation results, limitations, and next steps.
 
 ## License
 
