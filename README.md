@@ -28,7 +28,7 @@ Tool logic stays separate from the MCP server so the tools can be tested without
 ## Roadmap
 
 - [x] **Step 1 — Synthetic data.** 10 FHIR R4 patient bundles and 5 policy documents (knee MRI, lumbar spine MRI, CPAP, GLP-1, physical therapy), with covered indications, required documentation, and exclusions.
-- [ ] **Step 2 — Tool logic and tests.** `get_patient`, `search_policy`, `check_criteria`, and `draft_request`, with pytest coverage including unknown patients, unknown procedures, and empty results.
+- [x] **Step 2 — Tool logic and tests.** `get_patient`, `search_policy`, `check_criteria`, and `draft_request`, with pytest coverage including unknown patients, unknown procedures, and empty results.
 - [ ] **Step 3 — MCP server.** Expose the four tools with FastMCP and verify them in the MCP Inspector.
 - [ ] **Step 4 — Agent loop.** Tool calling with a step limit, failed-call handling, a structured final result, and a log of each call, its arguments, latency, and tokens.
 - [ ] **Step 5 — FastAPI endpoint.** `POST /prior-auth` returns the decision, draft, citations, and step trace.
