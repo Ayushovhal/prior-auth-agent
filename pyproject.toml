@@ -1,0 +1,16 @@
+[project]
+name = "prior-auth-agent"
+version = "0.1.0"
+description = "Synthetic prior authorization agent"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.5.0",
+    "sentence-transformers>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
